@@ -22,8 +22,8 @@ router.get('/', async (req, res) => {
         }
       ]
     })
-    res.status(200).json(productData);
 
+    res.status(200).json(productData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -47,8 +47,8 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({ message: 'No product found with this id!' });
       return;
     }
-    res.status(200).json(productData);
 
+    res.status(200).json(productData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -100,25 +100,21 @@ router.put("/:id", async (req, res) => {
 
     const productTagIds = productTags.map(({ tag_id }) => tag_id);
     // create filtered list of new tag_ids
-    const newProductTags = req.body.tagIds
-      .filter((tag_id) => !productTagIds.includes(tag_id))
-      .map((tag_id) => {
-        return {
-          product_id: req.params.id,
-          tag_id,
-        };
-      });
+    const newProductTags = req.body.tagIds.filter((tag_id) => !productTagIds.includes(tag_id)).map((tag_id) => {
+      return {
+        product_id: req.params.id,
+        tag_id,
+      };
+    });
     // figure out which ones to remove
-    const productTagsToRemove = productTags
-      .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
-      .map(({ id }) => id);
+    const productTagsToRemove = productTags.filter(({ tag_id }) => !req.body.tagIds.includes(tag_id)).map(({ id }) => id);
     // run both actions
     const updatedProductTags = await Promise.all([
       ProductTag.destroy({ where: { id: productTagsToRemove } }),
       ProductTag.bulkCreate(newProductTags),
     ]);
 
-    res.json(updatedProductTags);
+    res.status(200).json(updatedProductTags);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -134,6 +130,7 @@ router.delete('/:id', async (req, res) => {
       res.status(404).json({ message: 'No product with this id!' });
       return;
     }
+
     res.status(200).json({ message: `Removed ${deleteProduct} from the database.` });
   } catch (err) {
     res.status(500).json(err);
