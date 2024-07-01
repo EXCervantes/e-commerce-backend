@@ -28,7 +28,7 @@ Creating this application helped practice more on utilizing Sequelize to manage 
   
 ## Installation
 
-First to use this application head to the [Employee Tracker](https://github.com/EXCervantes/employee-tracker) and clone the repository. To learn how to clone a repository checkout this guide [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+First to use this application head to the [E-Commerce Backend](https://github.com/EXCervantes/e-commerce-backend) and clone the repository. To learn how to clone a repository checkout this guide [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 You must have `node` installed on your system. Go [here](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) for instructions on how to do so. In addition to properly run this application natively you must have [PostgreSQL](https://www.postgresql.org/) installed on your system. Follow instructions on the website for details on how to get that application running.
 
@@ -40,11 +40,11 @@ DB_USER='postgres'
 DB_PASSWORD='user's password created during PostgreSQL install'
 ```
 
-Finally to initialize this application run `node index.js` or `npm start` in the Terminal.
+Finally to initialize this application run `node server.js` or `npm start` in the Terminal.
   
 ## Usage
   
-To run the application open the Terminal or GitBash in VSCode and run `node index.js`.
+To run the application open the Terminal or GitBash in VSCode and run `node server.js` or `npm start`. 
 
 ### Video Demonstrating Application In Use
 
@@ -52,9 +52,10 @@ Here is a [link]() to a video demonstrating how this application works.
 
 ### Screenshots of the Application
 
-![Screenshot 1](assets/images/employeetrackerscreen1.jpg)
-![Screenshot 2](assets/images/employeetrackerscreen2.jpg)
-![Screenshot 3](assets/images/employeetrackerscreen3.jpg)
+![GET](assets/images/ecommercebackendscreen1.jpg)
+![PUT](assets/images/ecommercebackendscreen2.jpg)
+![POST](assets/images/ecommercebackendscreen3.jpg)
+![DELETE](assets/images/ecommercebackendscreen4.jpg)
 
 ## Credits
 
