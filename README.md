@@ -53,7 +53,8 @@ Here is a [link]() to a video demonstrating how this application works.
 
 ## Credits
 
-Referenced for examples of referencing foreign keys within the same table.
+Referenced for examples of include with attributes in Sequelize.
+https://stackoverflow.com/questions/21883484/how-to-use-an-include-with-attributes-with-sequelize
   
 ## License
 
