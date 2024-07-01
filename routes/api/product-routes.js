@@ -40,6 +40,10 @@ router.get('/:id', async (req, res) => {
           model: Tag,
           attributes: ['id', 'tag_name'],
           through: 'ProductTag',
+        },
+        {
+          model: Category,
+          attributes: ['id', 'category_name']
         }]
     });
 
@@ -71,7 +75,7 @@ router.post('/', async (req, res) => {
     if (req.body.tagIds.length) {
       const productTagIdArr = req.body.tagIds.map((tag_id) => {
         return {
-          product_id: product.id,
+          product_id: Product.id,
           tag_id,
         };
       });
@@ -131,7 +135,7 @@ router.delete('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json({ message: `Removed ${deleteProduct} from the database.` });
+    res.status(200).json({ message: 'Removed from the database.' });
   } catch (err) {
     res.status(500).json(err);
   }

@@ -15,9 +15,14 @@
 
 ## Description
 
+This project is an application an E-commerce back end as a REST API. It uses packages such as "PostgreSQL Node client" and "Dotenv" through Express.js using Sequelize to handle database interaction. The Node language manager uses those packages to perform CRUD actions such as to create, update, get, and delete the categories, products, and tags of the E-commerce database.
+
+Creating this application helped practice more on utilizing Sequelize to manage the database in a more quicker way. There were some challenges encountered in this project such so figuring out how to update and post products following a set criteria.
+
 ## Technologies and Packages Used
 
 - [Node.js](https://nodejs.org/en)
+- [Sequelize](https://sequelize.org/)
 - [PostgreSQL Node client](https://www.npmjs.com/package/pg)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
   
@@ -61,3 +66,4 @@ https://stackoverflow.com/questions/21883484/how-to-use-an-include-with-attribut
 This project is licensed under [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Please see the [License](https://opensource.org/licenses/MIT) page for more info.
+
