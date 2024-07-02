@@ -2,16 +2,14 @@
 
 ## Table of Contents
 
-- [E-Commerce Back End](#e-commerce-back-end)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Technologies and Packages Used](#technologies-and-packages-used)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Video Demonstrating Application In Use](#video-demonstrating-application-in-use)
-    - [Screenshots of the Application](#screenshots-of-the-application)
-  - [Credits](#credits)
-  - [License](#license)
+- [Description](#description)
+- [Technologies and Packages Used](#technologies-and-packages-used)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Video Demonstrating Application In Use](#video-demonstrating-application-in-use)
+  - [Screenshots of the Application](#screenshots-of-the-application)
+- [Credits](#credits)
+- [License](#license)
 
 ## Description
 
@@ -86,7 +84,7 @@ To run the application open the Terminal or GitBash in VSCode and run `node serv
 
 ### Video Demonstrating Application In Use
 
-Here is a [link]() to a video demonstrating how this application works.
+Here is a [link](https://drive.google.com/file/d/1_O4EFcm3EWi8YgnUyWq1tvCtk_1MGdeW/view) to a video demonstrating how this application works.
 
 ### Screenshots of the Application
 
