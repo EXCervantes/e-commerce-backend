@@ -15,9 +15,7 @@
 
 This is an E-commerce back end application using REST API. It uses packages such as "PostgreSQL Node client" and "Dotenv" and [Express.js](https://expressjs.com/) along with [Sequelize](https://sequelize.org/) to handle database interaction. The Node language manager uses those packages to perform CRUD actions such as to create, update, get, and delete the categories, products, and tags of the E-commerce database. To easily interact with these API calls a user can use an application such as [Insomnia](https://insomnia.rest/).
 
-Creating this application helped practice more on utilizing Sequelize to manage the database in a more quicker way. There were some challenges encountered in this project such so figuring out how to update and post products following a set criteria.
-
-Further development involves implementing a front end for ease of access for interacting directly with the database.
+Creating this application helped practice more on utilizing Sequelize to manage the database in a more quicker way. There were some challenges encountered in this project such as figuring out how to update and post products following a set criteria correctly. Further development involves implementing a front end for ease of access for interacting directly with the database.
 
 ## Technologies and Packages Used
 
