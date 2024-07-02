@@ -95,7 +95,7 @@ Here is a [link to a video](https://drive.google.com/file/d/1_O4EFcm3EWi8YgnUyWq
 
 ## Credits
 
-Referenced for examples of include with attributes in Sequelize.
+Referenced for examples on how to include with attributes in Sequelize.
 
 "_node.js - How to use an include with attributes with sequelize? - Stack Overflow_". (2018, April 25). Stack Overflow. Retrieved June 26, 2024, from https://stackoverflow.com/questions/21883484/how-to-use-an-include-with-attributes-with-sequelize
   
