@@ -15,9 +15,11 @@
 
 ## Description
 
-This project is an application an E-commerce back end as a REST API. It uses packages such as "PostgreSQL Node client" and "Dotenv" through [Express.js](https://expressjs.com/) using [Sequelize](https://sequelize.org/) to handle database interaction. The Node language manager uses those packages to perform CRUD actions such as to create, update, get, and delete the categories, products, and tags of the E-commerce database. To easily interact with these API calls a user can use an application such as [Insomnia](https://insomnia.rest/)
+This is an E-commerce back end application using REST API. It uses packages such as "PostgreSQL Node client" and "Dotenv" and [Express.js](https://expressjs.com/) along with [Sequelize](https://sequelize.org/) to handle database interaction. The Node language manager uses those packages to perform CRUD actions such as to create, update, get, and delete the categories, products, and tags of the E-commerce database. To easily interact with these API calls a user can use an application such as [Insomnia](https://insomnia.rest/).
 
 Creating this application helped practice more on utilizing Sequelize to manage the database in a more quicker way. There were some challenges encountered in this project such so figuring out how to update and post products following a set criteria.
+
+Further development involves implementing a front end for ease of access for interacting directly with the database.
 
 ## Technologies and Packages Used
 
@@ -30,9 +32,9 @@ Creating this application helped practice more on utilizing Sequelize to manage 
   
 ## Installation
 
-First to use this application head to the [E-Commerce Backend](https://github.com/EXCervantes/e-commerce-backend) and clone the repository. To learn how to clone a repository checkout this guide [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+First to use this application head to [E-Commerce Backend](https://github.com/EXCervantes/e-commerce-backend) and clone the repository. To learn how to clone a repository checkout this guide [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-You must have `node` installed on your system. Go [here](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) for instructions on how to do so. To properly run this application natively you must have [PostgreSQL](https://www.postgresql.org/) installed on your system. Run `npm i` to install the necessary dependencies onto your system.
+You must have `node` installed on your system. Go [here](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) for instructions on how to do so. To properly run this application you must have [PostgreSQL](https://www.postgresql.org/) installed on your system. Run `npm i` to install the necessary dependencies onto your system.
 
 This application utilizes a package that requires a file named `.env` to be created on the user's native system in the root directory of the cloned repo. The following lines must exist in this file:
 
@@ -44,7 +46,7 @@ DB_PASSWORD='user's password created during PostgreSQL install'
 
 ## Usage
 
-Once Node, PostgreSQL, and the necessary dependencies have been installed as well as the `.env` file created a user can then run PostgreSQL to create a SQL database using the terminal with the following command:
+Once Node, PostgreSQL, and the necessary dependencies have been installed as well as the `.env` file created a user can then run PostgreSQL to create a SQL database in the terminal with the following commands. First navigate to the database directory:
 
 ```md
 cd db
@@ -65,6 +67,9 @@ Finally use the following commands in sequential order to quit Postgres then nav
 
 ```md
 \q
+```
+
+```md
 cd ..
 ```
 
@@ -98,4 +103,3 @@ Referenced for examples of include with attributes in Sequelize.
 This project is licensed under [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Please see the [License](https://opensource.org/licenses/MIT) page for more info.
-
