@@ -78,7 +78,7 @@ The next step is to seed the database with the following command in the terminal
 npm run seed
 ```
 
-To run the application open the Terminal or GitBash in VSCode and run `node server.js` or `npm start`. Now the server is active and a user can use an application such as [Insomnia](https://insomnia.rest/) to perform the CRUD operations with this application.
+To run the application open the Terminal or GitBash in VSCode and enter `node server.js` or `npm start`. Now the server is active and a user can use an application such as [Insomnia](https://insomnia.rest/) to perform the CRUD operations with this application.
 
 ### Video Demonstrating Application In Use
 
