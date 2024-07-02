@@ -1,7 +1,9 @@
+// Import dependencies of sequelize library and our database connection
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
+// Initialize Category model and set up fields and rules for Category model
 class Category extends Model { }
 
 Category.init(
