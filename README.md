@@ -46,7 +46,9 @@ DB_PASSWORD='user's password created during PostgreSQL install'
 
 ## Usage
 
-Once Node, PostgreSQL, and the necessary dependencies have been installed as well as the `.env` file created a user can then run PostgreSQL to create a SQL database in the terminal with the following commands. First navigate to the database directory:
+Once Node, PostgreSQL, and the necessary dependencies have been installed as well as the `.env` file created a user can then run PostgreSQL to create a database in the terminal with the following commands.
+
+First navigate to the database directory
 
 ```md
 cd db
@@ -61,7 +63,8 @@ psql -U postgres
 Then run the command to create the database
 
 ```md
-\i schema.sql```
+\i schema.sql
+```
 
 Finally use the following commands in sequential order to quit Postgres then navigate to the home directory
 
