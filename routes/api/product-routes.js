@@ -75,11 +75,11 @@ router.post('/', async (req, res) => {
     if (req.body.tagIds.length) {
       const productTagIdArr = req.body.tagIds.map((tag_id) => {
         return {
-          product_id: Product.id,
+          product_id: productData.id,
           tag_id,
         };
       });
-      const productTagIds = ProductTag.bulkCreate(productTagIdArr);
+      const productTagIds = await ProductTag.bulkCreate(productTagIdArr);
       res.status(200).json(productTagIds)
     } else {
       // if no product tags, just respond
@@ -100,25 +100,29 @@ router.put("/:id", async (req, res) => {
       },
     });
 
-    const productTags = await ProductTag.findAll({ where: { product_id: req.params.id } });
+    const productTagsData = await ProductTag.findAll({ where: { product_id: req.params.id } });
 
-    const productTagIds = productTags.map(({ tag_id }) => tag_id);
+    const productTagIds = productTagsData.map(({ tag_id }) => tag_id);
     // create filtered list of new tag_ids
-    const newProductTags = req.body.tagIds.filter((tag_id) => !productTagIds.includes(tag_id)).map((tag_id) => {
-      return {
-        product_id: req.params.id,
-        tag_id,
-      };
-    });
+    const newProductTagsData = req.body.tagIds
+      .filter((tag_id) => !productTagIds.includes(tag_id))
+      .map((tag_id) => {
+        return {
+          product_id: req.params.id,
+          tag_id,
+        };
+      });
     // figure out which ones to remove
-    const productTagsToRemove = productTags.filter(({ tag_id }) => !req.body.tagIds.includes(tag_id)).map(({ id }) => id);
+    const productTagsDataToRemove = productTagsData
+      .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
+      .map(({ id }) => id);
     // run both actions
-    const updatedProductTags = await Promise.all([
-      ProductTag.destroy({ where: { id: productTagsToRemove } }),
-      ProductTag.bulkCreate(newProductTags),
+    const updatedProductTagsData = await Promise.all([
+      ProductTag.destroy({ where: { id: productTagsDataToRemove } }),
+      ProductTag.bulkCreate(newProductTagsData),
     ]);
 
-    res.status(200).json(updatedProductTags);
+    res.status(200).json(updatedProductTagsData);
   } catch (err) {
     res.status(400).json(err);
   }
